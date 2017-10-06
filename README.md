@@ -1,4 +1,4 @@
 # Initialization
 
-1. `npm init`
+1. `npm install`
 2. `npm start`
