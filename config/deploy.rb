@@ -1,14 +1,15 @@
 # config valid only for current version of Capistrano
 lock "3.9.1"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "react.lab"
+set :repo_url, "git@github.com:loraydev/react.lab.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, "/home/dev/www/react.lab"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh

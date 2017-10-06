@@ -1,0 +1,93 @@
+# Logfile created on 2017-10-06 14:35:54 +0200 by logger.rb/v1.2.7
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-06 14:35:54 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [318bb1fd] Running /usr/bin/env mkdir -p /tmp as dev@127.0.0.1
+ DEBUG [318bb1fd] Command: /usr/bin/env mkdir -p /tmp
+  INFO [318bb1fd] Finished in 1.887 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-my_app_name-staging-loray.sh 0.0%
+  INFO Uploading /tmp/git-ssh-my_app_name-staging-loray.sh 100.0%
+  INFO [780a26bb] Running /usr/bin/env chmod 700 /tmp/git-ssh-my_app_name-staging-loray.sh as dev@127.0.0.1
+ DEBUG [780a26bb] Command: /usr/bin/env chmod 700 /tmp/git-ssh-my_app_name-staging-loray.sh
+  INFO [780a26bb] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [b3a27644] Running /usr/bin/env git ls-remote git@example.com:me/my_repo.git HEAD as dev@127.0.0.1
+ DEBUG [b3a27644] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-my_app_name-staging-loray.sh" ; /usr/bin/env git ls-remote git@example.com:me/my_repo.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-06 14:37:31 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [38f08f7f] Running /usr/bin/env mkdir -p /tmp as dev@127.0.0.1
+ DEBUG [38f08f7f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [38f08f7f] Finished in 1.376 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-react.lab-staging-loray.sh 0.0%
+  INFO Uploading /tmp/git-ssh-react.lab-staging-loray.sh 100.0%
+  INFO [d8b86dc4] Running /usr/bin/env chmod 700 /tmp/git-ssh-react.lab-staging-loray.sh as dev@127.0.0.1
+ DEBUG [d8b86dc4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-react.lab-staging-loray.sh
+  INFO [d8b86dc4] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [10012ed0] Running /usr/bin/env git ls-remote git@github.com:loraydev/react.lab.git HEAD as dev@127.0.0.1
+ DEBUG [10012ed0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-react.lab-staging-loray.sh" ; /usr/bin/env git ls-remote git@github.com:loraydev/react.lab.git HEAD )
+ DEBUG [10012ed0] 	06c8d8bcb18ea71ad05ee2ec0b5b388592e70476	HEAD
+  INFO [10012ed0] Finished in 1.724 seconds with exit status 0 (successful).
+  INFO [50da89bb] Running /usr/bin/env mkdir -p /home/dev/www/react.lab/shared /home/dev/www/react.lab/releases as dev@127.0.0.1
+ DEBUG [50da89bb] Command: /usr/bin/env mkdir -p /home/dev/www/react.lab/shared /home/dev/www/react.lab/releases
+  INFO [50da89bb] Finished in 0.034 seconds with exit status 0 (successful).
+ DEBUG [632dfbba] Running [ -f /home/dev/www/react.lab/current/REVISION ] as dev@127.0.0.1
+ DEBUG [632dfbba] Command: [ -f /home/dev/www/react.lab/current/REVISION ]
+ DEBUG [632dfbba] Finished in 0.013 seconds with exit status 1 (failed).
+ DEBUG [437afb20] Running [ -f /home/dev/www/react.lab/repo/HEAD ] as dev@127.0.0.1
+ DEBUG [437afb20] Command: [ -f /home/dev/www/react.lab/repo/HEAD ]
+ DEBUG [437afb20] Finished in 0.009 seconds with exit status 1 (failed).
+ DEBUG [87e0d66d] Running if test ! -d /home/dev/www/react.lab; then echo "Directory does not exist '/home/dev/www/react.lab'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [87e0d66d] Command: if test ! -d /home/dev/www/react.lab; then echo "Directory does not exist '/home/dev/www/react.lab'" 1>&2; false; fi
+ DEBUG [87e0d66d] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [5542295f] Running /usr/bin/env git clone --mirror git@github.com:loraydev/react.lab.git /home/dev/www/react.lab/repo as dev@127.0.0.1
+ DEBUG [5542295f] Command: cd /home/dev/www/react.lab && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-react.lab-staging-loray.sh" ; /usr/bin/env git clone --mirror git@github.com:loraydev/react.lab.git /home/dev/www/react.lab/repo )
+ DEBUG [5542295f] 	Cloning into bare repository '/home/dev/www/react.lab/repo'...
+  INFO [5542295f] Finished in 1.774 seconds with exit status 0 (successful).
+ DEBUG [e8d65d94] Running if test ! -d /home/dev/www/react.lab/repo; then echo "Directory does not exist '/home/dev/www/react.lab/repo'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [e8d65d94] Command: if test ! -d /home/dev/www/react.lab/repo; then echo "Directory does not exist '/home/dev/www/react.lab/repo'" 1>&2; false; fi
+ DEBUG [e8d65d94] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [3c4b97fe] Running /usr/bin/env git remote set-url origin git@github.com:loraydev/react.lab.git as dev@127.0.0.1
+ DEBUG [3c4b97fe] Command: cd /home/dev/www/react.lab/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-react.lab-staging-loray.sh" ; /usr/bin/env git remote set-url origin git@github.com:loraydev/react.lab.git )
+  INFO [3c4b97fe] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [3c8fae3f] Running /usr/bin/env git remote update --prune as dev@127.0.0.1
+ DEBUG [3c8fae3f] Command: cd /home/dev/www/react.lab/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-react.lab-staging-loray.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3c8fae3f] 	Fetching origin
+  INFO [3c8fae3f] Finished in 1.659 seconds with exit status 0 (successful).
+ DEBUG [828cafed] Running if test ! -d /home/dev/www/react.lab/repo; then echo "Directory does not exist '/home/dev/www/react.lab/repo'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [828cafed] Command: if test ! -d /home/dev/www/react.lab/repo; then echo "Directory does not exist '/home/dev/www/react.lab/repo'" 1>&2; false; fi
+ DEBUG [828cafed] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [50a3c315] Running /usr/bin/env mkdir -p /home/dev/www/react.lab/releases/20171006123734 as dev@127.0.0.1
+ DEBUG [50a3c315] Command: cd /home/dev/www/react.lab/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-react.lab-staging-loray.sh" ; /usr/bin/env mkdir -p /home/dev/www/react.lab/releases/20171006123734 )
+  INFO [50a3c315] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [9eea48b5] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/dev/www/react.lab/releases/20171006123734 as dev@127.0.0.1
+ DEBUG [9eea48b5] Command: cd /home/dev/www/react.lab/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-react.lab-staging-loray.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/dev/www/react.lab/releases/20171006123734 )
+  INFO [9eea48b5] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [61c633dd] Running if test ! -d /home/dev/www/react.lab/repo; then echo "Directory does not exist '/home/dev/www/react.lab/repo'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [61c633dd] Command: if test ! -d /home/dev/www/react.lab/repo; then echo "Directory does not exist '/home/dev/www/react.lab/repo'" 1>&2; false; fi
+ DEBUG [61c633dd] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [1ab53a83] Running /usr/bin/env git rev-list --max-count=1 develop as dev@127.0.0.1
+ DEBUG [1ab53a83] Command: cd /home/dev/www/react.lab/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-react.lab-staging-loray.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [1ab53a83] 	06c8d8bcb18ea71ad05ee2ec0b5b388592e70476
+ DEBUG [1ab53a83] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [0551bd3a] Running if test ! -d /home/dev/www/react.lab/releases/20171006123734; then echo "Directory does not exist '/home/dev/www/react.lab/releases/20171006123734'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [0551bd3a] Command: if test ! -d /home/dev/www/react.lab/releases/20171006123734; then echo "Directory does not exist '/home/dev/www/react.lab/releases/20171006123734'" 1>&2; false; fi
+ DEBUG [0551bd3a] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [a95972da] Running /usr/bin/env echo "06c8d8bcb18ea71ad05ee2ec0b5b388592e70476" >> REVISION as dev@127.0.0.1
+ DEBUG [a95972da] Command: cd /home/dev/www/react.lab/releases/20171006123734 && /usr/bin/env echo "06c8d8bcb18ea71ad05ee2ec0b5b388592e70476" >> REVISION
+  INFO [a95972da] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [f2f4d85a] Running /usr/bin/env ln -s /home/dev/www/react.lab/releases/20171006123734 /home/dev/www/react.lab/releases/current as dev@127.0.0.1
+ DEBUG [f2f4d85a] Command: /usr/bin/env ln -s /home/dev/www/react.lab/releases/20171006123734 /home/dev/www/react.lab/releases/current
+  INFO [f2f4d85a] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [e024b574] Running /usr/bin/env mv /home/dev/www/react.lab/releases/current /home/dev/www/react.lab as dev@127.0.0.1
+ DEBUG [e024b574] Command: /usr/bin/env mv /home/dev/www/react.lab/releases/current /home/dev/www/react.lab
+  INFO [e024b574] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [fd6ffa3a] Running /usr/bin/env ls -x /home/dev/www/react.lab/releases as dev@127.0.0.1
+ DEBUG [fd6ffa3a] Command: /usr/bin/env ls -x /home/dev/www/react.lab/releases
+ DEBUG [fd6ffa3a] 	20171006123734
+ DEBUG [fd6ffa3a] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [9263784d] Running if test ! -d /home/dev/www/react.lab/releases; then echo "Directory does not exist '/home/dev/www/react.lab/releases'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [9263784d] Command: if test ! -d /home/dev/www/react.lab/releases; then echo "Directory does not exist '/home/dev/www/react.lab/releases'" 1>&2; false; fi
+ DEBUG [9263784d] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [4a485283] Running /usr/bin/env echo "Branch develop (at 06c8d8bcb18ea71ad05ee2ec0b5b388592e70476) deployed as release 20171006123734 by loray" >> /home/dev/www/react.lab/revisions.log as dev@127.0.0.1
+ DEBUG [4a485283] Command: cd /home/dev/www/react.lab/releases && /usr/bin/env echo "Branch develop (at 06c8d8bcb18ea71ad05ee2ec0b5b388592e70476) deployed as release 20171006123734 by loray" >> /home/dev/www/react.lab/revisions.log
+  INFO [4a485283] Finished in 0.004 seconds with exit status 0 (successful).
