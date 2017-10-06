@@ -1,10 +1,14 @@
-#server-based syntax
+# server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
+<<<<<<< HEAD
 set :branch, ENV.fetch("CAPISTRANO_BRANCH", "develop")
 
 server "127.0.0.1", user: "dev", roles: %w{app db web}
+=======
+
+>>>>>>> 06c8d8bcb18ea71ad05ee2ec0b5b388592e70476
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
